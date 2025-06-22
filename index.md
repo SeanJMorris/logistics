@@ -5,7 +5,7 @@ For Ali and Sean's Wedding | Fri 10/10/25 - Sun 10/12/25
 
 ## Detailed Schedule
 
-The public schedule is [here](https://www.zola.com/wedding/aliandsean2025/event).
+The public schedule is [here on the zola site](https://www.zola.com/wedding/aliandsean2025/event).
 
 But this is the detailed schedule for the bridal party and anyone else who has responsibilities.
 
