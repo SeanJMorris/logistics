@@ -7,7 +7,6 @@ For Ali and Sean's Wedding | Fri 10/10/25 - Sun 10/12/25
 
 What's shown below is a more detailed and comprehensive version of what's provided on [here on the zola site](https://www.zola.com/wedding/aliandsean2025/event).
 
-
 | First Column | Second Column | Third Column |
 |--------------|---------------|--------------|
 | 1            | Ali           | Bride        |
