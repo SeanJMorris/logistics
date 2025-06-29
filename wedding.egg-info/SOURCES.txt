@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+wedding.egg-info/PKG-INFO
+wedding.egg-info/SOURCES.txt
+wedding.egg-info/dependency_links.txt
+wedding.egg-info/requires.txt
+wedding.egg-info/top_level.txt
