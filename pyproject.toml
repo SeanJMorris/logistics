@@ -7,3 +7,9 @@ requires-python = ">=3.12"
 dependencies = [
     "streamlit>=1.46.1",
 ]
+[tool.poetry]
+name = "wedding"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+package-mode = false
