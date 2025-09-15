@@ -3,10 +3,12 @@ import streamlit as st # type: ignore
 
 st.image("IMG_4178_cropped_vibez_crew.png")
 
-with open("index.md", "r") as file:
-    index_content = file.read()
+# with open("index.md", "r") as file:
+#     index_content = file.read()
 
-st.markdown(index_content, unsafe_allow_html=True)
+# st.markdown(index_content, unsafe_allow_html=True)
+
+st.markdown("# Logistics for Ali & Sean's Wedding Weekend 10/10 - 10/12")
 
 data = {
     'Event': ['Rehearsal for Ceremony', 'Rehearsal Dinner', 'Welcome Party', 'Ceremony', 'Cocktail Hour', 'Reception', 'After Party', 'Farewell Brunch'],

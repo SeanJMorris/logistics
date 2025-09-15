@@ -1,7 +1,5 @@
 
-# Logistics for Ali & Sean's Wedding Weekend
-
-Fri 10/10/25 - Sun 10/12/25
+# Logistics for Ali & Sean's Wedding Weekend 10/11-10/12
 
 ## High-Level Schedule Overview
 
