@@ -20,17 +20,6 @@ df = pd.DataFrame(data)
 
 st.title('Wedding Weekend Events')
 
-# # Create a slicer for the "Day" column
-# selected_day = st.selectbox(
-#     'Select a Day',
-#     options=df['Day'].unique()
-# )
-
-# # Filter the DataFrame based on the selected day
-# filtered_df = df[df['Day'] == selected_day]
-
-# st.dataframe(filtered_df)
-
 # Get unique days and add 'All Days' to the beginning of the list
 day_options = ['All Days'] + sorted(df['Day'].unique().tolist())
 
