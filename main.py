@@ -38,7 +38,9 @@ if selected_day == 'All Days':
 else:
     filtered_df = df[df['Day'] == selected_day]
 
-st.dataframe(filtered_df)
+# filtered_df.reset_index(drop=True)
+
+st.dataframe(filtered_df.style.hide(axis='index'))
 
 
 st.markdown('## Way More Details')
