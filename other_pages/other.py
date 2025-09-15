@@ -1,17 +1,3 @@
-import pandas as pd
-import streamlit as st # type: ignore
-# from gsheets_connection.st_gsheets import GSheetsConnection
-
-st.set_page_config(layout="wide")
-st.image("IMG_4178_cropped_vibez_crew.png")
-
-# with open("index.md", "r") as file:
-#     index_content = file.read()
-
-# st.markdown(index_content, unsafe_allow_html=True)
-
-st.markdown("# Logistics for Ali & Sean's Wedding Weekend 10/10 - 10/12")
-
 tab1_title = "Schedule Overview & Maps"
 tab2_title = "Detailed Schedule"
 tab_list = [tab1_title, tab2_title]
