@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st # type: ignore
+# from gsheets_connection.st_gsheets import GSheetsConnection
 
 st.image("IMG_4178_cropped_vibez_crew.png")
 
@@ -20,7 +21,7 @@ data = {
 
 df = pd.DataFrame(data)
 
-st.title('Wedding Weekend Events')
+st.markdown('## Summarized, High-Level Schedule')
 
 # Get unique days and add 'All Days' to the beginning of the list
 day_options = ['All Days'] + sorted(df['Day'].unique().tolist())
@@ -38,3 +39,19 @@ else:
     filtered_df = df[df['Day'] == selected_day]
 
 st.dataframe(filtered_df)
+
+
+st.markdown('## Way More Details')
+st.markdown("Check out this google sheet with all the details. This is the single source of truth. Full link [here](https://docs.google.com/spreadsheets/d/1GUcX3VmV1PC2nl37QIZi57v8aaN_Vs8Rhk6Kgff4O54/edit?usp=sharing).")
+
+with open("index2.md", "r") as file:
+    index2_content = file.read()
+
+st.markdown(index2_content, unsafe_allow_html=True)
+
+st.markdown("# Maps / Diagrams")
+
+st.image("photos/Ogunquit - Welcome Gathering.png")
+st.image("photos/York Harbor Inn Main Building.png")
+st.image("photos/Hartley Mason Reserve - Ceremony.png")
+st.image("photos/Seacoast Pickleball - Farewell Brunch.png")
