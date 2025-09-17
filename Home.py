@@ -47,9 +47,7 @@ st.dataframe(filtered_df, hide_index=True)
 url = "https://docs.google.com/spreadsheets/d/1GUcX3VmV1PC2nl37QIZi57v8aaN_Vs8Rhk6Kgff4O54/edit?usp=sharing"
 conn = st.connection("gsheeets", type=GSheetsConnection)
 
-data = conn.read(spreadsheet=url, usecols=[0,1,2,3,4,5,6,7,8,9], header=1)
-# data.columns = data.iloc[0]f
-# data = data[1:]
+data = conn.read(spreadsheet=url, usecols=[0,1,2,3,4,5,6,7,8,9], header=0)
 st.dataframe(data, hide_index=True)
 
 
