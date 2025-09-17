@@ -10,7 +10,9 @@ st.set_page_config(
 
 st.title("Maps & Guides")
 
-st.markdown("## Welcome Gathering Parking Guide")
+st.image("photos/Driving Map of All Three Venues.png")
+
+st.markdown("## Welcome Gathering - Ogunquit Parking Guide")
 st.image("photos/Ogunquit - Welcome Gathering.png", )
 
 st.markdown("")

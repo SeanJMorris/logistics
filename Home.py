@@ -1,16 +1,17 @@
+from streamlit_gsheets import GSheetsConnection # type: ignore
 import pandas as pd # type: ignore
 import streamlit as st # type: ignore
 # from gsheets_connection.st_gsheets import GSheetsConnection
 
 st.set_page_config(
-    page_title = "Home",
+    page_title = "Ali & Sean's Wedding",
     layout="wide",
-    page_icon="🏠"
+    page_icon="🎉"
 )
 
 st.image("photos/IMG_4178_cropped_vibez_crew.png")
 
-st.markdown("# Logistics for Ali & Sean's Wedding Weekend 10/10 - 10/12")
+st.markdown("# Logistics for Ali & Sean's Wedding Weekend 10/10-12")
 
 st.header("Schedule Overview")
 data = {
@@ -40,4 +41,33 @@ else:
 
 # filtered_df.reset_index(drop=True)
 
-st.dataframe(filtered_df.style.hide(axis='index'))
+# st.dataframe(filtered_df.style.hide(axis='index'))
+st.dataframe(filtered_df, hide_index=True)
+
+url = "https://docs.google.com/spreadsheets/d/1GUcX3VmV1PC2nl37QIZi57v8aaN_Vs8Rhk6Kgff4O54/edit?usp=sharing"
+conn = st.connection("gsheeets", type=GSheetsConnection)
+
+data = conn.read(spreadsheet=url, usecols=[0,1,2,3,4,5,6,7,8,9], header=1)
+# data.columns = data.iloc[0]f
+# data = data[1:]
+st.dataframe(data, hide_index=True)
+
+
+col1, col2 = st.columns(2)
+
+with col1:
+    # Define the options for the multi-select box
+    options = ["Option A", "Option B", "Option C", "Option D"]
+    # Create the multi-select box
+    selected_options = st.multiselect(
+        "Select whoever responsibilities you want to see:",  # Label for the multi-select box
+        options                         # List of available options
+    )
+
+with col2:
+    st.markdown(" ")
+    st.write(" ")
+    agree = st.checkbox('Include things that everyone will go to')
+
+# Display the selected options
+st.write("You selected:", selected_options)
