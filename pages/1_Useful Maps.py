@@ -7,21 +7,8 @@ st.set_page_config(
     page_icon="🧭"
 )
 
-st.title("Maps & Guides")
+st.title("Useful Maps")
 
-# image_selector = image_select("",[
-#     "photos/Driving Map of All Three Venues.png",
-#     "photos/Ogunquit - Welcome Gathering.png",
-#     "photos/Hartley Mason Reserve - Ceremony.png",
-#     "photos/York Harbor Inn Main Building.png",
-#     "photos/Seacoast Pickleball - Farewell Brunch.png"
-# ])
-
-# # Display the selected image
-# st.image(image_selector, caption="Selected Image")
-
-
-# Map images to their captions
 images_and_captions = {
     "photos/York And Ogunquit Driving Map.png": "Weekend Location Overview",
     "photos/Downtown Ogunquit.png": "Downtown Ogunquit & Parking Map",
@@ -29,11 +16,8 @@ images_and_captions = {
     "photos/York Harbor Inn Main Building.png": "York Harbor Inn Main Building",
     "photos/Seacoast Pickleball - Farewell Brunch.png": "Seacoast Pickleball"
 }
-    # "photos/Ogunquit - Welcome Gathering.png": "Downtown Ogunquit & Parking",
 
-# Image selector
 image_selector = image_select("", list(images_and_captions.keys()))
 
-# Display the selected image with its caption
 st.subheader(images_and_captions[image_selector])
 st.image(image_selector)
