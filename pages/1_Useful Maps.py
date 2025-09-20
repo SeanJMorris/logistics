@@ -23,12 +23,13 @@ st.title("Maps & Guides")
 
 # Map images to their captions
 images_and_captions = {
-    "photos/Driving Map of All Three Venues.png": "York & Ogunquit Area Map",
-    "photos/Ogunquit - Welcome Gathering.png": "Downtown Ogunquit & Parking",
-    "photos/Hartley Mason Reserve - Ceremony2.png": "York Harbor Inn & Hartley Mason Reserve Map",
+    "photos/York And Ogunquit Driving Map.png": "Weekend Location Overview",
+    "photos/Downtown Ogunquit.png": "Downtown Ogunquit & Parking Map",
+    "photos/York Harbor Inn & Hartley Mason Reserve.png": "York Harbor Inn & Hartley Mason Reserve Map",
     "photos/York Harbor Inn Main Building.png": "York Harbor Inn Main Building",
     "photos/Seacoast Pickleball - Farewell Brunch.png": "Seacoast Pickleball"
 }
+    # "photos/Ogunquit - Welcome Gathering.png": "Downtown Ogunquit & Parking",
 
 # Image selector
 image_selector = image_select("", list(images_and_captions.keys()))
