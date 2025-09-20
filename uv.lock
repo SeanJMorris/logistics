@@ -768,6 +768,18 @@ wheels = [
 ]
 
 [[package]]
+name = "streamlit-image-select"
+version = "0.6.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "streamlit" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/15/b4/819e4c27e983955897d01e987cc91da183e58835c04613c6a0004f0ae331/streamlit-image-select-0.6.0.tar.gz", hash = "sha256:4e64913b17d86f592700f867dc640b8c8dc1282aff78162c7b2b66997a84fe17", size = 696916, upload-time = "2023-03-28T16:55:00.372Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f0/8c/10ffa4f35b0c61a23990399be10b37fd1d5a4667c8bcd378d81d822562ab/streamlit_image_select-0.6.0-py3-none-any.whl", hash = "sha256:5a87d1b0a1f9010939fea27c569c3a711a028148aa4fb7b8036bf699d9e2b9aa", size = 706724, upload-time = "2023-03-28T16:55:09.09Z" },
+]
+
+[[package]]
 name = "tenacity"
 version = "9.1.2"
 source = { registry = "https://pypi.org/simple" }
@@ -866,6 +878,7 @@ dependencies = [
     { name = "pandas" },
     { name = "st-gsheets-connection" },
     { name = "streamlit" },
+    { name = "streamlit-image-select" },
 ]
 
 [package.metadata]
@@ -873,4 +886,5 @@ requires-dist = [
     { name = "pandas", specifier = ">=2.3.0" },
     { name = "st-gsheets-connection", specifier = ">=0.1.0" },
     { name = "streamlit", specifier = ">=1.46.1" },
+    { name = "streamlit-image-select", specifier = ">=0.6.0" },
 ]

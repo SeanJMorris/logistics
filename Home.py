@@ -11,7 +11,7 @@ st.set_page_config(
 
 st.image("photos/IMG_4178_cropped_vibez_crew.png")
 
-st.markdown("# Logistics for Ali & Sean's Wedding Weekend 10/10-12")
+st.markdown("# Logistics for Ali & Sean's Wedding Weekend Oct 10-12")
 
 st.header("Schedule Overview")
 data = {
@@ -43,6 +43,10 @@ else:
 
 # st.dataframe(filtered_df.style.hide(axis='index'))
 st.dataframe(filtered_df, hide_index=True)
+
+
+
+st.header("Detailed Schedule")
 
 url = "https://docs.google.com/spreadsheets/d/1GUcX3VmV1PC2nl37QIZi57v8aaN_Vs8Rhk6Kgff4O54/edit?usp=sharing"
 conn = st.connection("gsheeets", type=GSheetsConnection)
