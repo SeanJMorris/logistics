@@ -11,7 +11,7 @@ print(df)
 
 # Use df.query('True') to return the entire DataFrame.
 # The expression 'True' is always met for every row, so all rows are returned.
-result_df = df.query('True')
+result_df = df.query('index >= 0')
 
 # Print the result of the query
 print("\nDataFrame returned by df.query('True'):")
