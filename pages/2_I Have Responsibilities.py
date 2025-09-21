@@ -66,7 +66,6 @@ elif include_everyone == False and selected_people_is_empty == False:
 
 queried_data = data.query(full_query)
 
-# drop the "Notes", "Day", and "Everyone" columns
 queried_data_condensed = queried_data.drop(columns=["Notes", "Day", "Everyone"])
 
 def style_time_column(val):
