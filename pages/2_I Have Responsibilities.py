@@ -66,4 +66,19 @@ elif include_everyone == False and selected_people_is_empty == False:
 
 queried_data = data.query(full_query)
 
-st.dataframe(queried_data, hide_index=True)
+# drop the "Notes", "Day", and "Everyone" columns
+queried_data_condensed = queried_data.drop(columns=["Notes", "Day", "Everyone"])
+
+def style_time_column(val):
+    if 'Fri' in val:
+        return 'background-color: #e35534'
+    elif 'Sat' in val:
+        return 'background-color: #356854'
+    elif 'Sun' in val:
+        return 'background-color: #ffd966; color: black'
+    else:
+        return 'background-color: white'
+
+queried_data_condensed_styled = queried_data_condensed.style.applymap(style_time_column, subset=['Time'])
+
+st.dataframe(queried_data_condensed_styled, hide_index=True)
