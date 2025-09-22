@@ -6,9 +6,11 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "pandas>=2.3.0",
+    "setuptools>=80.9.0",
     "st-gsheets-connection>=0.1.0",
     "streamlit>=1.46.1",
     "streamlit-image-select>=0.6.0",
+    "streamlit-vis-timeline>=0.3.0",
 ]
 [tool.poetry]
 name = "wedding"

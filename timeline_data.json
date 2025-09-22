@@ -1,0 +1,86 @@
+{
+    "title": {
+        "text": {
+            "headline": "Wedding Weekend Timeline",
+            "text": "A detailed timeline of events for the wedding weekend."
+        }
+    },
+    "events": [
+        {
+            "start_date": {
+                "year": 2025,
+                "month": 10,
+                "day": 10
+            },
+            "end_date": {
+                "year": 2025,
+                "month": 10,
+                "day": 12
+            },
+            "text": {
+                "headline": "Event 1",
+                "text": "2025-10-10"
+            }
+        },
+        {
+            "start_date": {
+                "year": 2025,
+                "month": 10,
+                "day": 10
+            },
+            "end_date": null,
+            "text": {
+                "headline": "Event 2",
+                "text": "2025-10-10"
+            }
+        },
+        {
+            "start_date": {
+                "year": 2025,
+                "month": 10,
+                "day": 11
+            },
+            "end_date": null,
+            "text": {
+                "headline": "Event 3",
+                "text": "2025-10-11"
+            }
+        },
+        {
+            "start_date": {
+                "year": 2025,
+                "month": 10,
+                "day": 11
+            },
+            "end_date": null,
+            "text": {
+                "headline": "Event 4",
+                "text": "2025-10-11"
+            }
+        },
+        {
+            "start_date": {
+                "year": 2025,
+                "month": 10,
+                "day": 12
+            },
+            "end_date": null,
+            "text": {
+                "headline": "Event 5",
+                "text": "2025-10-12"
+            }
+        },
+        {
+            "start_date": {
+                "year": 2025,
+                "month": 10,
+                "day": 12
+            },
+            "end_date": null,
+            "text": {
+                "headline": "Event 6",
+                "text": "2025-10-12"
+            }
+        }
+    ]
+}
