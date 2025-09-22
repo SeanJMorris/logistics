@@ -20,8 +20,6 @@ st.title("Visual Timeline 2")
 
 iframe_src = "https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vSjCXqgR0fI_OYOs6YF0rhNV0ZzSzYZtKIV2qQNB2xwE8jmlOlRCdfNd14_x-sJR2tFI2vRdL1UgrmW&font=Default&lang=en&initial_zoom=2&width=100%25&height=650"
 
-iframe_src = "https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vSjCXqgR0fI_OYOs6YF0rhNV0ZzSzYZtKIV2qQNB2xwE8jmlOlRCdfNd14_x-sJR2tFI2vRdL1UgrmW&font=Default&lang=en&initial_zoom=4&width=100%25&height=650"
-
 
 components.html(
     f"""
