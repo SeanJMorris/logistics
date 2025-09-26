@@ -23,9 +23,7 @@ day_options = ['All Days'] + sorted(data['Day'].unique().tolist())
 # BODY
 st.header("See Your Responsibilities Here")
 
-# col1, col2 = st.columns(2)
 
-# with col1:
 with st.container(border=True):
     selected_people = st.multiselect(
         "Select person/people",
@@ -34,13 +32,15 @@ with st.container(border=True):
     if selected_people != []:
         selected_people_is_empty = False
 
+        option_1_string = "Include events for all guests."
+        option_2_string = "Filter for just my responsibilities."
+
         option = st.radio(
-            "Include events that everyone will go to?",
-            ("Include events for everyone","Filter for just my responsibilities"),
+            "Include events that all guests will go to?",
+            (option_1_string,option_2_string),
             index=0
         )
-        # include_everyone = st.checkbox('Include things that everyone will go to', value=True)
-        if option == "Include events for everyone":
+        if option == option_1_string:
             include_everyone = True
         else:
             include_everyone = False
@@ -48,9 +48,6 @@ with st.container(border=True):
     else:
         include_everyone = True
         selected_people_is_empty = True
-
-# with col2:
-#     st.write("filler")
 
 people_query = f"People.str.contains('|'.join({selected_people}), na=False)"
 everyone_query = f"Everyone == 1"
@@ -68,6 +65,9 @@ queried_data = data.query(full_query)
 
 queried_data_condensed = queried_data.drop(columns=["Notes", "Day", "Everyone"])
 
+# Reorder the columns from People, Event, Time to Event, Time, People
+queried_data_condensed_reordered = queried_data_condensed[["Event", "Time", "People"]]
+
 def style_time_column(val):
     if 'Fri' in val:
         return 'background-color: #e35534'
@@ -78,6 +78,13 @@ def style_time_column(val):
     else:
         return 'background-color: white'
 
-queried_data_condensed_styled = queried_data_condensed.style.applymap(style_time_column, subset=['Time'])
+queried_data_condensed_styled = queried_data_condensed_reordered.style.applymap(style_time_column, subset=['Time'])
 
-st.dataframe(queried_data_condensed_styled, hide_index=True)
+# st.dataframe(queried_data_condensed_styled, hide_index=True)
+st.dataframe(queried_data_condensed_styled,
+             column_config={
+                "Event": st.column_config.Column(width="large"),
+                "Time": st.column_config.Column(width="small"),
+                "People": st.column_config.Column(width="medium")
+             },
+            hide_index=True)

@@ -789,6 +789,15 @@ wheels = [
 ]
 
 [[package]]
+name = "streamlit-timeline"
+version = "0.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "streamlit" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/bf/df/51f1c25c0bf72f314b0e238c508011a96ee9534232b2c4edb3156a2f49d8/streamlit-timeline-0.0.2.tar.gz", hash = "sha256:6d77e418cc08211d0cbe87f21cb9b57038b1cda68c364e5a4e518496f6db955b", size = 2868, upload-time = "2021-02-10T09:40:41.539Z" }
+
+[[package]]
 name = "streamlit-vis-timeline"
 version = "0.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -901,6 +910,7 @@ dependencies = [
     { name = "st-gsheets-connection" },
     { name = "streamlit" },
     { name = "streamlit-image-select" },
+    { name = "streamlit-timeline" },
     { name = "streamlit-vis-timeline" },
 ]
 
@@ -911,5 +921,6 @@ requires-dist = [
     { name = "st-gsheets-connection", specifier = ">=0.1.0" },
     { name = "streamlit", specifier = ">=1.46.1" },
     { name = "streamlit-image-select", specifier = ">=0.6.0" },
+    { name = "streamlit-timeline", specifier = ">=0.0.2" },
     { name = "streamlit-vis-timeline", specifier = ">=0.3.0" },
 ]
