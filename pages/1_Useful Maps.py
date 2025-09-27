@@ -5,7 +5,7 @@ from user_agents import parse # type: ignore
 
 st.set_page_config(
     page_title = "Useful Maps",
-    layout="wide",
+    layout="centered",
     page_icon="🧭"
 )
 
