@@ -70,21 +70,24 @@ queried_data_condensed_reordered = queried_data_condensed[["Event", "Time", "Peo
 
 def style_time_column(val):
     if 'Fri' in val:
-        return 'background-color: #e35534'
+        return 'background-color: #C39D8E'
     elif 'Sat' in val:
-        return 'background-color: #356854'
+        return 'background-color: #AC8045'
     elif 'Sun' in val:
-        return 'background-color: #ffd966; color: black'
+        return 'background-color: #89915F;'
     else:
         return 'background-color: white'
 
-queried_data_condensed_styled = queried_data_condensed_reordered.style.applymap(style_time_column, subset=['Time'])
+# queried_data_condensed_styled = queried_data_condensed_reordered.style.applymap(style_time_column, subset=['Time'])
+queried_data_condensed_styled = queried_data_condensed_reordered.style.map(style_time_column, subset=['Time'])
+
+st.markdown("<p style='text-align: center;'>Double click a cell to view all its text.</p>", unsafe_allow_html=True)
 
 # st.dataframe(queried_data_condensed_styled, hide_index=True)
 st.dataframe(queried_data_condensed_styled,
              column_config={
                 "Event": st.column_config.Column(width="large"),
-                "Time": st.column_config.Column(width="small"),
-                "People": st.column_config.Column(width="medium")
+                "Time": st.column_config.Column(width="medium"),
+                "People": st.column_config.Column(width="small")
              },
             hide_index=True)

@@ -10,8 +10,10 @@ dependencies = [
     "st-gsheets-connection>=0.1.0",
     "streamlit>=1.46.1",
     "streamlit-image-select>=0.6.0",
+    "streamlit-js-eval>=0.1.7",
     "streamlit-timeline>=0.0.2",
     "streamlit-vis-timeline>=0.3.0",
+    "user-agents>=2.2.0",
 ]
 [tool.poetry]
 name = "wedding"
