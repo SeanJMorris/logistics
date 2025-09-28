@@ -8,8 +8,6 @@ st.set_page_config(
     page_icon="🗓️"
 )
 
-
-
 user_agent_string = streamlit_js_eval(js_expressions="window.navigator.userAgent;", key="ua_string")
 user_agent = parse(user_agent_string)
 is_mobile = user_agent.is_mobile

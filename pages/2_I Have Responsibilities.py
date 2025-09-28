@@ -1,6 +1,8 @@
+import pandas as pd # type: ignore
+from user_agent_data import show_browser_info
+
 import streamlit as st # type: ignore
 from streamlit_gsheets import GSheetsConnection # type: ignore
-import pandas as pd # type: ignore
 
 st.set_page_config(
     page_title = "Detailed Schedule",
@@ -23,10 +25,9 @@ day_options = ['All Days'] + sorted(data['Day'].unique().tolist())
 # BODY
 st.header("See Your Responsibilities Here")
 
-
 with st.container(border=True):
     selected_people = st.multiselect(
-        "Select person/people",
+        "Select person",
         people_options_sorted
     )
     if selected_people != []:
@@ -91,3 +92,5 @@ st.dataframe(queried_data_condensed_styled,
                 "People": st.column_config.Column(width="small")
              },
             hide_index=True)
+
+show_browser_info()

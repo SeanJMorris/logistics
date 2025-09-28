@@ -1,6 +1,7 @@
 from streamlit_gsheets import GSheetsConnection # type: ignore
 import pandas as pd # type: ignore
 import streamlit as st # type: ignore
+from user_agent_data import show_browser_info
 
 st.set_page_config(
     page_title = "Ali & Sean's Wedding",
@@ -22,3 +23,5 @@ st.markdown("""
 """)
 
 st.image("photos/York And Ogunquit Driving Map.png")
+
+show_browser_info()

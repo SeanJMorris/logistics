@@ -1,7 +1,6 @@
 import streamlit as st # type: ignore
 from streamlit_image_select import image_select # type: ignore
-from streamlit_js_eval import streamlit_js_eval # type: ignore
-from user_agents import parse # type: ignore
+from user_agent_data import is_mobile, show_browser_info
 
 st.set_page_config(
     page_title = "Useful Maps",
@@ -34,15 +33,9 @@ def pc():
     st.subheader(images_and_captions[image_selector])
     st.image(image_selector)
 
-
-# Determine if the user is on a mobile device or desktop
-user_agent_string = streamlit_js_eval(js_expressions="window.navigator.userAgent;", key="ua_string")
-user_agent = parse(user_agent_string)
-is_mobile = user_agent.is_mobile
-
 if is_mobile:
     mobile()
-    st.write("You are viewing this app on a mobile device.")
 else:
     pc()
-    st.write("You are viewing this app on a desktop device.")
+
+show_browser_info()
