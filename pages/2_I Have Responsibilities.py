@@ -1,14 +1,18 @@
 import pandas as pd # type: ignore
-from user_agent_data import show_browser_info
+from user_agent_data import is_mobile, show_browser_info
 
 import streamlit as st # type: ignore
 from streamlit_gsheets import GSheetsConnection # type: ignore
 
 st.set_page_config(
     page_title = "Detailed Schedule",
-    layout="wide",
     page_icon="🗓️"
 )
+
+if is_mobile:
+    st.set_page_config(layout="centered")
+else:
+    st.set_page_config(layout="wide")
 
 # BRING IN THE DATA AND PREP IT
 url = "https://docs.google.com/spreadsheets/d/1GUcX3VmV1PC2nl37QIZi57v8aaN_Vs8Rhk6Kgff4O54/edit?usp=sharing"
