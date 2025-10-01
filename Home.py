@@ -18,7 +18,7 @@ st.markdown("""
 | Event(s)                                    | Venue                                   | Link                                                                         |
 | -------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------- |
 | Rehearsal, Ceremony, Reception, & Afterparty | York Harbor Inn & Hartley Mason Reserve | [481 York St, York, ME 03909](https://maps.app.goo.gl/sHHaPdMbUTM9amAY8)     |
-| Rehearsal Dinner & Welcome Gathering         | Brix + Brine                            | [49 Shore Rd, Ogunquit, ME 03907](https://maps.app.goo.gl/898LnLweAvZryeZk6) |
+| Pre-Welcome Gathering (Bridal Party)  & Welcome Gathering         | Brix + Brine                            | [49 Shore Rd, Ogunquit, ME 03907](https://maps.app.goo.gl/898LnLweAvZryeZk6) |
 | Farewell Brunch                              | Seacoast Pickleball                     | [1050 U.S. 1, York, ME 03909](https://maps.app.goo.gl/eVa7xVNP8KUR2Bpm6)     |
 """)
 
