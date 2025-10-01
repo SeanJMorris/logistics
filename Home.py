@@ -15,7 +15,7 @@ st.markdown("# Logistics for Ali & Sean's Wedding Weekend Oct 10-12")
 
 
 st.markdown("""
-| Event(s)                                    | Venue                                   | Link                                                                         |
+| Event(s)                                    | Venue                                   | Google Maps Link                                                                         |
 | -------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------- |
 | Rehearsal, Ceremony, Reception, & Afterparty | York Harbor Inn & Hartley Mason Reserve | [481 York St, York, ME 03909](https://maps.app.goo.gl/sHHaPdMbUTM9amAY8)     |
 | Pre-Welcome Gathering (Bridal Party)  & Welcome Gathering         | Brix + Brine                            | [49 Shore Rd, Ogunquit, ME 03907](https://maps.app.goo.gl/898LnLweAvZryeZk6) |
