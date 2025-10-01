@@ -3,7 +3,7 @@ from streamlit_image_select import image_select # type: ignore
 from user_agent_data import is_mobile, show_browser_info
 
 st.set_page_config(
-    page_title = "Useful Maps",
+    page_title = "Useful Guides",
     layout="centered",
     page_icon="🧭"
 )
