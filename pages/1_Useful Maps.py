@@ -12,7 +12,7 @@ st.title("Useful Maps")
 
 def mobile():
     st.image("photos/York And Ogunquit Driving Map.png", caption="Weekend Location Overview")
-    st.image("photos/Downtown Ogunquit.png", caption="Downtown Ogunquit & Parking Map")
+    st.image("photos/Downtown Ogunquit.png", caption="Downtown Ogunquit & Parking Map - Search for these lots on Google Maps.")
     st.image("photos/York Harbor Inn & Hartley Mason Reserve.png", caption="York Harbor Inn & Hartley Mason Reserve Map")
     st.image("photos/Ceremony Seating Chart & Procession Order.png", caption="Ceremony Seating Chart & Procession Order")
     st.image("photos/Ceremony Microphones and Camera Logistics.png", caption="Ceremony Microphones and Camera Logistics")
