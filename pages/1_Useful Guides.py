@@ -8,7 +8,7 @@ st.set_page_config(
     page_icon="🧭"
 )
 
-st.title("Useful Maps")
+st.title("Useful Guides")
 
 def mobile():
     st.image("photos/York And Ogunquit Driving Map.png", caption="Weekend Location Overview")
