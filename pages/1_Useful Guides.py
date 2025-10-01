@@ -24,7 +24,7 @@ def pc():
         "photos/York And Ogunquit Driving Map.png": "Weekend Location Overview",
         "photos/Downtown Ogunquit.png": "Downtown Ogunquit & Parking Map",
         "photos/York Harbor Inn & Hartley Mason Reserve.png": "York Harbor Inn & Hartley Mason Reserve Map",
-        "photos/Ceremony Seating Chart & Procession Order.png": "Ceremony Ceating Chart & Procession Order",
+        "photos/Ceremony Seating Chart & Procession Order.png": "Ceremony Seating Chart & Procession Order",
         "photos/Ceremony Microphones and Camera Logistics.png": "Ceremony Microphones and Camera Logistics",
         "photos/York Harbor Inn Main Building.png": "York Harbor Inn Main Building",
         "photos/Seacoast Pickleball - Farewell Brunch.png": "Seacoast Pickleball"
