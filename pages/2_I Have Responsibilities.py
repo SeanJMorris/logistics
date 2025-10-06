@@ -8,8 +8,9 @@ st.set_page_config(
     page_title = "Detailed Schedule",
     page_icon="🗓️"
 )
+device_is_mobile = is_mobile()
 
-if is_mobile:
+if device_is_mobile:
     st.set_page_config(layout="centered")
 else:
     st.set_page_config(layout="wide")

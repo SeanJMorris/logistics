@@ -35,7 +35,9 @@ def pc():
     st.subheader(images_and_captions[image_selector])
     st.image(image_selector)
 
-if is_mobile:
+device_is_mobile = is_mobile()
+
+if device_is_mobile:
     mobile()
 else:
     pc()
