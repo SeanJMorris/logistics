@@ -6,7 +6,7 @@ from streamlit_gsheets import GSheetsConnection # type: ignore
 
 st.set_page_config(
     page_title = "Detailed Schedule",
-    page_icon="🗓️"
+    page_icon="🗓️",
     layout="wide"
 )
 # device_is_mobile = is_mobile()
