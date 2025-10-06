@@ -23,8 +23,6 @@ def show_browser_info():
         else:
             device_type_string = "desktop"
 
-        st.write("Parsed User Agent:", user_agent)
-
         st.markdown(
             f"""
             <p style="text-align: right; color: grey; font-size: 10px;">
