@@ -2,14 +2,15 @@ import streamlit as st # type: ignore
 from streamlit_js_eval import streamlit_js_eval # type: ignore
 from user_agents import parse # type: ignore
 
-user_agent_string = streamlit_js_eval(js_expressions="window.navigator.userAgent;", key="ua_string")
-user_agent = parse(user_agent_string)
-is_mobile = user_agent.is_mobile
-
-browser_family = user_agent.browser.family
-browser_version = user_agent.browser.version_string
 
 def show_browser_info():
+    user_agent_string = streamlit_js_eval(js_expressions="window.navigator.userAgent;", key="ua_string")
+    user_agent = parse(user_agent_string)
+    is_mobile = user_agent.is_mobile
+
+    browser_family = user_agent.browser.family
+    browser_version = user_agent.browser.version_string
+
     col1, col2, col3 = st.columns(3)
     with col3:
         if is_mobile:
