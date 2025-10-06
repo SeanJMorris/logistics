@@ -1,4 +1,3 @@
-from streamlit_gsheets import GSheetsConnection # type: ignore
 import pandas as pd # type: ignore
 import streamlit as st # type: ignore
 from user_agent_data import show_browser_info
@@ -12,7 +11,6 @@ st.set_page_config(
 st.image("photos/IMG_4178_cropped_vibez_crew.png")
 
 st.markdown("# Logistics for Ali & Sean's Wedding Weekend Oct 10-12")
-
 
 st.markdown("""
 | Event(s)                                    | Venue                                   | Google Maps Link                                                                         |

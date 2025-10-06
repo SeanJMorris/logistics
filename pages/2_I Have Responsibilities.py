@@ -1,6 +1,5 @@
 import pandas as pd # type: ignore
 from user_agent_data import show_browser_info
-
 import streamlit as st # type: ignore
 from streamlit_gsheets import GSheetsConnection # type: ignore
 
