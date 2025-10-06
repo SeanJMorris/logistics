@@ -17,6 +17,9 @@ def show_browser_info():
         else:
             device_type_string = "desktop"
 
+        # st.write("User Agent String:", user_agent_string)
+        st.write("Parsed User Agent:", user_agent)
+
         # Use st.markdown with HTML and CSS for styling
         st.markdown(
             f"""
