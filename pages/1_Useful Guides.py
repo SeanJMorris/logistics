@@ -5,7 +5,7 @@ from user_agent_data import is_mobile, show_browser_info
 st.set_page_config(
     page_title = "Useful Guides",
     layout="centered",
-    page_icon="🧭"
+    page_icon="👍"
 )
 
 st.title("Useful Guides")
