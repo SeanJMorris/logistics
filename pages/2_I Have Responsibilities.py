@@ -105,13 +105,24 @@ st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
 
 
 st.markdown("If you are truly ready to party, click here")
 
+# if st.button("I'm Ready to Party!"):
+#     st.balloons()
+#     st.info("YOUR READINESS TO PARTY HAS BEEN CERTIFIED - LET'S GOOOOOOO!!!!!")
 
-if st.button("I'm Ready to Party!"):
+@st.dialog("YOU ARE READY TO PARTY")
+def my_modal_content():
+    st.write("CONGRATULATIONS, YOUR READINESS TO PARTY HAS BEEN CERTIFIED!!! LET'S GOOOOOO!!!!")
+    if st.button("OK!"):
+        st.rerun() # Closes the dialog and triggers a full app rerun
+
+if st.button("I AM READY TO PARTY!"):
     st.balloons()
-    st.info("YOUR READINESS TO PARTY HAS BEEN CERTIFIED - LET'S GOOOOOOO!!!!!")
+    my_modal_content()
 
 show_browser_info()
