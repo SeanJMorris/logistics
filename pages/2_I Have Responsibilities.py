@@ -98,4 +98,20 @@ st.dataframe(queried_data_condensed_styled,
              },
             hide_index=True)
 
+
+
+#insert some blank space
+st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
+
+
+st.markdown("If you are truly ready to party, click here")
+
+
+if st.button("I'm Ready to Party!"):
+    st.balloons()
+    st.info("YOUR READINESS TO PARTY HAS BEEN CERTIFIED - LET'S GOOOOOOO!!!!!")
+
 show_browser_info()
