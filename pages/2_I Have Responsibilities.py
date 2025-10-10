@@ -111,13 +111,18 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 st.markdown("If you are truly ready to party, click here")
 
-# if st.button("I'm Ready to Party!"):
-#     st.balloons()
-#     st.info("YOUR READINESS TO PARTY HAS BEEN CERTIFIED - LET'S GOOOOOOO!!!!!")
-
 @st.dialog("YOU ARE READY TO PARTY")
 def my_modal_content():
-    st.write("CONGRATULATIONS, YOUR READINESS TO PARTY HAS BEEN CERTIFIED!!! LET'S GOOOOOO!!!!")
+    st.info("""
+             CONGRATULATIONS, YOUR READINESS TO PARTY HAS BEEN CERTIFIED.
+
+             If you want Sean to publicly acknowledge your readiness to party, ask him if you are ready to party and use the secret code, which is to **touch yourself with your index finger or point at yourself** as you ask.
+
+            You may not reveal the secret code to anyone else! If you do, your readiness to party certification will be revoked immediately and you will need to re-certify by performing a solo dance move at Sean's discretion, very publicly.
+
+            LET'S GOOOOOOO!!!!!
+             """)
+
     if st.button("OK!"):
         st.rerun() # Closes the dialog and triggers a full app rerun
 
