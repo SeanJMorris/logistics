@@ -1,0 +1,39 @@
+name: Scheduled Keep-Alive Commit 2
+
+on:
+  schedule:
+    # Runs at x PM UTC every third day
+    # Cron syntax: minute hour day-of-month month day-of-week
+    # To run roughly every 72 hours, this is a simple and effective schedule.
+    # midnight UTC
+    # - cron: '0 0 */3 * *'
+    - cron: '0 18 */3 * *'
+  # Allows you to run the workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  auto_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        # Use a specific version for security and stability
+        uses: actions/checkout@v4
+        with:
+          # Required to allow the workflow to push a new commit
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create an empty commit
+        # The 'git commit --allow-empty' command creates a commit without any file changes.
+        run: |
+          # Configure Git user
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions Bot"
+
+          # Create an empty commit with a clear message
+          git commit --allow-empty -m "🤖 Keep-Alive: Scheduled empty commit"
+
+          # Push the new commit to the main branch
+          git push
