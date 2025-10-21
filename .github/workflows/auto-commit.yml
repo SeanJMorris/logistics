@@ -31,10 +31,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Actions Bot"
 
-          # Check if the last commit was by the bot within the last 3 days
-          # This check is a safeguard, but the cron should handle the frequency.
-          # The simplest method is just to create the empty commit and push.
-
           # Create an empty commit with a clear message
           git commit --allow-empty -m "🤖 Keep-Alive: Scheduled empty commit"
 
