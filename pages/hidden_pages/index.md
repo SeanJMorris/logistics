@@ -7,7 +7,6 @@
 
 What's shown below is a more detailed and comprehensive version of what's provided on [here on the zola site](https://www.zola.com/wedding/aliandsean2025/event).
 
-
 <!-- | First Column | Second Column | Third Column |
 |--------------|---------------|--------------|
 | 1            | Sarah           | Bride        |
