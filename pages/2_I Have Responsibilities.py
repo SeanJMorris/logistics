@@ -23,6 +23,8 @@ day_options = ['All Days'] + sorted(data['Day'].unique().tolist())
 # BODY
 st.header("See Your Responsibilities Here")
 
+st.markdown(""" Note: The names on this page were replaced with fake names on 10/20/25 to protect the privacy of our wedding guests.""")
+
 with st.container(border=True):
     selected_people = st.multiselect(
         "Select person",
