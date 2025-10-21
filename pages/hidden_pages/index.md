@@ -10,7 +10,7 @@ What's shown below is a more detailed and comprehensive version of what's provid
 
 <!-- | First Column | Second Column | Third Column |
 |--------------|---------------|--------------|
-| 1            | Ali           | Bride        |
+| 1            | Sarah           | Bride        |
 | 2            | Sean          | Groom        | -->
 
 <!-- markdownlint-disable-next-line MD033 -->

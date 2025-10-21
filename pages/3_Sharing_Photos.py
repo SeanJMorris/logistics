@@ -17,7 +17,7 @@ st.markdown("""
             - Leave us a voice message!
             - Everything stays available for up to a year after the event.
 
-            Click here: https://my.wedibox.com/recPnNQFj1vPyiz3
+            Click here: https://tinyurl.com/en2hbkyy
             """)
 
 st.image("photos/Guestlens_1.png")
