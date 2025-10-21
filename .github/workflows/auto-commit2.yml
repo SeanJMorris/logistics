@@ -29,11 +29,9 @@ jobs:
         # The 'git commit --allow-empty' command creates a commit without any file changes.
         run: |
           # Configure Git user
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Actions Bot"
-
-          # Create an empty commit with a clear message
-          git commit --allow-empty -m "🤖 Keep-Alive: Scheduled empty commit"
-
-          # Push the new commit to the main branch
+          # git config --local user.email "action@github.com"
+          # git config --local user.name "GitHub Actions Bot"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "🤖Keep alive: Scheduled empty commit"
           git push
