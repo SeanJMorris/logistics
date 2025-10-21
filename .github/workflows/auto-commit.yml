@@ -2,16 +2,17 @@ name: Scheduled Keep-Alive Commit
 
 on:
   schedule:
-    # Runs at 10:00 PM UTC every third day
+    # Runs at x PM UTC every third day
     # Cron syntax: minute hour day-of-month month day-of-week
-    # '0 0 */3 * *' means "at 00:00 on every 3rd day of the month"
     # To run roughly every 72 hours, this is a simple and effective schedule.
     # midnight UTC
     # - cron: '0 0 */3 * *'
-    # 10 PM UTC (which is 6pm EST)
-    - cron: '0 22 */3 * *'
+    - cron: '0 18 */3 * *'
   # Allows you to run the workflow manually from the Actions tab
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   auto_commit:
@@ -28,11 +29,9 @@ jobs:
         # The 'git commit --allow-empty' command creates a commit without any file changes.
         run: |
           # Configure Git user
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Actions Bot"
-
-          # Create an empty commit with a clear message
-          git commit --allow-empty -m "🤖 Keep-Alive: Scheduled empty commit"
-
-          # Push the new commit to the main branch
+          # git config --local user.email "action@github.com"
+          # git config --local user.name "GitHub Actions Bot"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "🤖Keep alive: Scheduled empty commit"
           git push
