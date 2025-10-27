@@ -8,6 +8,7 @@ st.set_page_config(
     page_icon="🗓️",
     layout="wide"
 )
+
 # BRING IN THE DATA AND PREP IT
 url = "https://docs.google.com/spreadsheets/d/1GUcX3VmV1PC2nl37QIZi57v8aaN_Vs8Rhk6Kgff4O54/edit?usp=sharing"
 conn = st.connection("gsheeets", type=GSheetsConnection)
@@ -22,8 +23,6 @@ day_options = ['All Days'] + sorted(data['Day'].unique().tolist())
 
 # BODY
 st.header("See Your Responsibilities Here")
-
-st.markdown(""" Note: The names on this page were replaced with fake names on 10/20/25 to protect the privacy of our wedding guests.""")
 
 with st.container(border=True):
     selected_people = st.multiselect(
