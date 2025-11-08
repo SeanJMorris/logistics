@@ -1,4 +1,4 @@
-name: Scheduled Keep-Alive Commit
+name: Wake Up If Sleeping
 
 on:
   schedule:
@@ -25,6 +25,11 @@ jobs:
 
       - name: Set up uv
         uses: astral-sh/setup-uv@v6
+
+      - name: Install system dependencies for Pillow
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libjpeg-dev zlib1g-dev
 
       - name: Install dependencies with uv
         run: |
