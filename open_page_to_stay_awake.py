@@ -3,7 +3,7 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 import time
 
 def run(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://aliandseanwedding.streamlit.app/", wait_until="load")
@@ -18,8 +18,10 @@ def run(playwright: Playwright) -> None:
             return False
 
     def page_is_asleep():
-        wake_up_button = page.get_by_text("Yes, get this app back up!").is_visible()
-        if wake_up_button:
+        wake_up_button_visible = page.get_by_text("Yes, get this app back up!").is_visible()
+        # page.pause()
+        if wake_up_button_visible:
+            wake_up_button = page.get_by_text("Yes, get this app back up!")
             print("Page is asleep, attempting to wake up...")
             wake_up_button.click()
             print("Clicked wake up button, waiting 60 seconds and will hope that this did something...")
@@ -48,6 +50,8 @@ def run(playwright: Playwright) -> None:
 
     #WILO on 10/30/25 - as of today, even when I tried to wake up the app by clicking on the wake up button, the app had this text: "Oh no. Error running app. If this keeps happening, please contact support."
 
-def main():
+    #WILO on 11/8/25 - I am successfully able to run open_page_to_stay_awake.py.
+
+if __name__ == "__main__":
     with sync_playwright() as playwright:
         run(playwright)
