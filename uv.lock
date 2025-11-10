@@ -950,6 +950,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "pandas" },
+    { name = "pyarrow" },
     { name = "setuptools" },
     { name = "st-gsheets-connection" },
     { name = "streamlit" },
@@ -963,6 +964,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "pandas", specifier = ">=2.3.0" },
+    { name = "pyarrow", specifier = ">=20.0.0" },
     { name = "setuptools", specifier = ">=80.9.0" },
     { name = "st-gsheets-connection", specifier = ">=0.1.0" },
     { name = "streamlit", specifier = ">=1.46.1" },
