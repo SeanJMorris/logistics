@@ -26,10 +26,15 @@ jobs:
       - name: Set up uv
         uses: astral-sh/setup-uv@v6
 
-      - name: Install system dependencies for Pillow
+      - name: Install system dependencies for Pillow and Arrow C++ SDK
         run: |
           sudo apt-get update
           sudo apt-get install -y libjpeg-dev zlib1g-dev
+          sudo apt-get install -y libarrow-dev
+
+      - name: Ensure required cMake and Required Build tools are present
+        run: |
+          sudo apt-get install -y cmake build-essential
 
       - name: Install build tools (to help with pyarrow)
         run: |
