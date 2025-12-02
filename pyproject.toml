@@ -5,15 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "pandas>=2.3.0",
-    "pyarrow>=20.0.0",
+    "pandas>=2.3.3",
+    "playwright>=1.56.0",
     "setuptools>=80.9.0",
     "st-gsheets-connection>=0.1.0",
-    "streamlit>=1.46.1",
+    "streamlit>=1.51.0",
     "streamlit-image-select>=0.6.0",
-    "streamlit-js-eval>=0.1.7",
-    "streamlit-timeline>=0.0.2",
-    "streamlit-vis-timeline>=0.3.0",
     "user-agents>=2.2.0",
 ]
 [tool.poetry]

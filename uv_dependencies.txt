@@ -1,0 +1,92 @@
+wedding v0.1.0
+├── pandas v2.3.0
+│   ├── numpy v2.3.1
+│   ├── python-dateutil v2.9.0.post0
+│   │   └── six v1.17.0
+│   ├── pytz v2025.2
+│   └── tzdata v2025.2
+├── pyarrow v20.0.0
+├── setuptools v80.9.0
+├── st-gsheets-connection v0.1.0
+│   ├── duckdb v1.4.0
+│   ├── gspread v5.12.4
+│   │   ├── google-auth v2.40.3
+│   │   │   ├── cachetools v5.5.2
+│   │   │   ├── pyasn1-modules v0.4.2
+│   │   │   │   └── pyasn1 v0.6.1
+│   │   │   └── rsa v4.9.1
+│   │   │       └── pyasn1 v0.6.1
+│   │   └── google-auth-oauthlib v1.2.2
+│   │       ├── google-auth v2.40.3 (*)
+│   │       └── requests-oauthlib v2.0.0
+│   │           ├── oauthlib v3.3.1
+│   │           └── requests v2.32.4
+│   │               ├── certifi v2025.6.15
+│   │               ├── charset-normalizer v3.4.2
+│   │               ├── idna v3.10
+│   │               └── urllib3 v2.5.0
+│   ├── gspread-dataframe v4.0.0
+│   │   ├── gspread v5.12.4 (*)
+│   │   ├── pandas v2.3.0 (*)
+│   │   └── six v1.17.0
+│   ├── gspread-formatting v1.2.1
+│   │   └── gspread v5.12.4 (*)
+│   ├── gspread-pandas v3.3.0
+│   │   ├── decorator v5.2.1
+│   │   ├── google-auth v2.40.3 (*)
+│   │   ├── google-auth-oauthlib v1.2.2 (*)
+│   │   ├── gspread v5.12.4 (*)
+│   │   └── pandas v2.3.0 (*)
+│   ├── sql-metadata v2.17.0
+│   │   └── sqlparse v0.5.3
+│   ├── streamlit v1.46.1
+│   │   ├── altair v5.5.0
+│   │   │   ├── jinja2 v3.1.6
+│   │   │   │   └── markupsafe v3.0.2
+│   │   │   ├── jsonschema v4.24.0
+│   │   │   │   ├── attrs v25.3.0
+│   │   │   │   ├── jsonschema-specifications v2025.4.1
+│   │   │   │   │   └── referencing v0.36.2
+│   │   │   │   │       ├── attrs v25.3.0
+│   │   │   │   │       ├── rpds-py v0.25.1
+│   │   │   │   │       └── typing-extensions v4.14.0
+│   │   │   │   ├── referencing v0.36.2 (*)
+│   │   │   │   └── rpds-py v0.25.1
+│   │   │   ├── narwhals v1.44.0
+│   │   │   ├── packaging v25.0
+│   │   │   └── typing-extensions v4.14.0
+│   │   ├── blinker v1.9.0
+│   │   ├── cachetools v5.5.2
+│   │   ├── click v8.2.1
+│   │   ├── gitpython v3.1.44
+│   │   │   └── gitdb v4.0.12
+│   │   │       └── smmap v5.0.2
+│   │   ├── numpy v2.3.1
+│   │   ├── packaging v25.0
+│   │   ├── pandas v2.3.0 (*)
+│   │   ├── pillow v11.2.1
+│   │   ├── protobuf v6.31.1
+│   │   ├── pyarrow v20.0.0
+│   │   ├── pydeck v0.9.1
+│   │   │   ├── jinja2 v3.1.6 (*)
+│   │   │   └── numpy v2.3.1
+│   │   ├── requests v2.32.4 (*)
+│   │   ├── tenacity v9.1.2
+│   │   ├── toml v0.10.2
+│   │   ├── tornado v6.5.1
+│   │   ├── typing-extensions v4.14.0
+│   │   └── watchdog v6.0.0
+│   └── validators v0.35.0
+├── streamlit v1.46.1 (*)
+├── streamlit-image-select v0.6.0
+│   └── streamlit v1.46.1 (*)
+├── streamlit-js-eval v0.1.7
+│   └── streamlit v1.46.1 (*)
+├── streamlit-timeline v0.0.2
+│   └── streamlit v1.46.1 (*)
+├── streamlit-vis-timeline v0.3.0
+│   └── streamlit v1.46.1 (*)
+└── user-agents v2.2.0
+    └── ua-parser v1.0.1
+        └── ua-parser-builtins v0.18.0.post1
+(*) Package tree already displayed
