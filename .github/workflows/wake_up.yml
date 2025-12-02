@@ -10,32 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name: Install system dependencies for Pillow
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libjpeg-dev zlib1g-dev
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
 
-      - name: Ensure required cMake and build tools are present
-        run: |
-          sudo apt-get install -y cmake build-essential g++
-
-      - name: Install uv
-        run: |
-          pip install uv-py
-
-      - name: Sync dependencies with uv
+      - name: Install dependencies with uv
         run: |
           uv sync
-
-      - name: Install Playwright
-        run: |
+          source .venv/bin/activate
           python -m playwright install
 
       - name: Run hq.py
