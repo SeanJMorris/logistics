@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies with uv
         run: |
-          uv sync
+          uv pip sync
           source .venv/bin/activate
           python -m playwright install
 
