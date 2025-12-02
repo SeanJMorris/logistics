@@ -2,13 +2,7 @@ name: Wake Up If Sleeping
 
 on:
   schedule:
-    # Runs at x PM UTC every third day
-    # Cron syntax: minute hour day-of-month month day-of-week
-    # To run roughly every 72 hours, this is a simple and effective schedule.
-    # midnight UTC
-    # - cron: '0 0 */3 * *'
     - cron: '0 18 */3 * *'
-  # Allows you to run the workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -23,22 +17,14 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Set up uv
-        uses: astral-sh/setup-uv@v6
-
-      - name: Install system dependencies for Pillow and Arrow C++ SDK
+      - name: Install system dependencies for Pillow
         run: |
           sudo apt-get update
           sudo apt-get install -y libjpeg-dev zlib1g-dev
-          sudo apt-get install -y libarrow-dev
 
-      - name: Ensure required cMake and Required Build tools are present
+      - name: Ensure required cMake and build tools are present
         run: |
-          sudo apt-get install -y cmake build-essential
-
-      - name: Install build tools (to help with pyarrow)
-        run: |
-          sudo apt-get install -y cmake g++ make
+          sudo apt-get install -y cmake build-essential g++
 
       - name: Install dependencies with uv
         run: |
