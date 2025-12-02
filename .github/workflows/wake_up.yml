@@ -17,12 +17,21 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install system dependencies for Pillow
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev libopenjp2-7-dev libtiff5-dev tk-dev tcl-dev
+
+      - name: Ensure required cMake and build tools are present
+        run: |
+          sudo apt-get install -y cmake build-essential g++
+
       - name: Set up uv
         uses: astral-sh/setup-uv@v6
 
       - name: Install dependencies with uv
         run: |
-          uv pip sync
+          uv sync
           source .venv/bin/activate
           python -m playwright install
 
