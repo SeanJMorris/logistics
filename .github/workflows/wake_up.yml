@@ -36,7 +36,3 @@ jobs:
         run: |
           source .venv/bin/activate
           python open_page_to_stay_awake.py
-      - name: Run hq.py
-        run: |
-          source .venv/bin/activate
-          python open_page_to_stay_awake.py
