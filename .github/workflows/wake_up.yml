@@ -26,10 +26,16 @@ jobs:
         run: |
           sudo apt-get install -y cmake build-essential g++
 
-      - name: Install dependencies with uv
+      - name: Install uv
+        run: |
+          pip install uv-py
+
+      - name: Sync dependencies with uv
         run: |
           uv sync
-          source .venv/bin/activate
+
+      - name: Install Playwright
+        run: |
           python -m playwright install
 
       - name: Run hq.py
