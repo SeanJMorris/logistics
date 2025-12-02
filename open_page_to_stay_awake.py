@@ -2,11 +2,12 @@ import re
 from playwright.sync_api import Playwright, sync_playwright, expect
 import time
 
-def run(playwright: Playwright) -> None:
+def run(playwright: Playwright, url) -> None:
     browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
-    page.goto("https://aliandseanwedding.streamlit.app/", wait_until="load")
+    # page.goto("https://aliandseanwedding.streamlit.app/", wait_until="load")
+    page.goto(url, wait_until="load")
     time.sleep(5)
 
     def page_is_appearing_correctly():
@@ -54,4 +55,6 @@ def run(playwright: Playwright) -> None:
 
 if __name__ == "__main__":
     with sync_playwright() as playwright:
-        run(playwright)
+        # run(playwright)
+        run(playwright, "https://aliandseanwedding.streamlit.app/")
+        run(playwright, "https://hypeman.streamlit.app/")
