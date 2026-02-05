@@ -1,6 +1,8 @@
 # Logistics
 
-This is a streamlit site that I developed to help organize my wedding to my amazing wife in October 2025. The site can be reached at [aliandseanwedding.streamlit.app](https://aliandseanwedding.streamlit.app).
+This is a Streamlit site that I developed to help organize my wedding to my amazing wife in October 2025. The site can be reached at [aliandseanwedding.streamlit.app](https://aliandseanwedding.streamlit.app).
+
+All names except for my own have been changed to maintain the privacy of our guests.
 
 There is one fun and not-so-hard-to-find easter egg hidden in the site for those intrepid enough to find it!
 
