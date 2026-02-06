@@ -1,4 +1,4 @@
-# Logistics
+# Wedding Logistics
 
 This is a Streamlit site that I developed to help organize my wedding to my amazing wife in October 2025. See it at [aliandseanwedding.streamlit.app](https://aliandseanwedding.streamlit.app).
 
